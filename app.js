@@ -1,20 +1,27 @@
 
-function b() {
-    var myVar;
-    console.log('myVar inside b: ', myVar);
-}
+
 
 function a() {
-    var myVar = 2;
-    console.log('myVar inside a: ', myVar);
+    function b() {
+        console.log(myVar);
+    }
+    
+    let myVar = 2;
     b();
 }
 
-var myVar = 1;
-console.log('myVar initial value: ', myVar);
+let myVar = 1;
 a();
 
+let c = 35;
+let d = 23;
 
+if (c > d) {
+    let c = true;
+    console.log('c = true: ', c);
+}
+
+console.log(c);
 // Don't use hoisting/rely on it to access variables and functions
 // console.log(a);
 
